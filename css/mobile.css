@@ -1,0 +1,24 @@
+
+
+/* version mobile */
+
+@media screen and (max-width:786px) {
+
+    /* avant nav */
+    .top-contacts{
+        max-width:100%
+    }
+    
+    .header{
+        display: none;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    /* section inscription */
+    .avis-inscription{
+        flex-direction: column;
+    }
+}

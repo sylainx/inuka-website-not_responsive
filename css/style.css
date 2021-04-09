@@ -1,0 +1,832 @@
+/* classes utilitaires */
+:root{
+    --bleuPrincipal: #313190;
+    --bleu2: #1E2D49;
+    --bleuBg: rgba(33,33,80,0.8);
+    --rouge1:#a6211d;
+    --rouge2:#bd5956;
+    --white: #ffffff;
+    --white2: #ececec;
+    --grisPal: #1E2D49;
+    --grisPal2: rgb(144, 144, 145);
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('../fonts/playfair_display/PlayfairDisplay-Italic-VariableFont_wght.ttf'),
+         local('../fonts/playfair_display/PlayfairDisplay-VariableFont_wght.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-Black.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-BlackItalic.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-Bold.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-BoldItalic.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-ExtraBold.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-ExtraBoldItalic.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-Italic.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-Medium.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-MediumItalic.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-Regular.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-SemiBold.ttf'),
+         local('../fonts/playfair_display/static/PlayfairDisplay-SemiBoldItalic.ttf')
+    ;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    scroll-behavior: smooth;
+    width: 100%;
+    font-family: 'Playfair Display', Roboto, Ubuntu,'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    /* color: inherit; */
+}
+li{
+    list-style-type: none;
+}
+
+.aligner-droit{
+    text-align: right;
+}
+.aligner-centre{
+    text-align: center;
+}
+.aligner-justify{
+    text-align: justify;
+}
+
+/* fin classes utilitaires */
+
+
+/* avant nav */
+.top-contacts{
+    color: var(--white);
+}
+
+.top-contacts .cont1{
+    padding: 0.5rem;
+    font-family: 'Play fair';
+    background: var(--bleu2);
+    line-height: 1.3;
+}
+
+.top-contacts a{
+    color: var(--white2);
+} 
+
+/* -------------- MAIN ------------ */
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*------ header -------*/
+.header{
+    width: 16%;
+    position: relative;
+    z-index: 3;
+    padding: 1rem 0.3rem;
+    line-height: 1;
+    box-shadow: 3px 0px 2px var(--white2); 
+}
+
+/* rechercher */
+.rechercher{
+    padding-bottom: 1.4rem;
+    padding-left: 2px;
+}
+
+.rechercher input{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--bleu2);
+    padding: 0.2rem;
+}
+
+/* placer l'image a gauche */
+.header #logo{
+    padding-bottom: 1rem;
+}
+
+.header #logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.header .nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+/* placer les nav en ligne */
+.header .nav li{
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    margin-left: 1.2rem;
+}
+.header .nav li a{
+    color: var(--bleu2);
+    transition: all ease-in-out 0.2s;
+    /* text-transform: uppercase; */
+}
+.header .nav li a:hover{
+    color: var(--bleuPrincipal);
+    border-bottom: 3px solid var(--rouge1);
+}
+/* -------------- SECTION ------------ */
+.section {
+    width: 84%;
+}
+
+
+/* -------- section Inscription --------- */
+.avis-inscription{    
+    position: relative;
+    z-index: 1;
+    background: var(--white2);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avis-inscription span{    
+    font-weight: bold;
+    color: var(--grisPal);
+}
+
+.avis-inscription a{
+    border: 1px solid var(--bleuPrincipal);
+    padding: 0.2rem 0.5rem;
+}
+
+/* banniere */
+
+.banniere{
+    display: flex;
+    justify-content: space-around;
+    height: 69vh;
+    padding: 3rem 5rem;
+    font-family: serif;
+    font-weight: bold;
+}
+.banniere .ban-text{
+    flex: 3;
+    color: var(--bleuPrincipal);
+}
+
+.banniere .ban-text h1{
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+
+.banniere .ban-text p{
+    font-family: sans-serif;
+    font-weight: 500;
+    color: var(--grisPal);
+    padding-bottom: 2rem;
+}
+.banniere .ban-text button{    
+    border: none;
+    outline: none;
+    color: var(--white);
+    background: var(--bleuPrincipal);
+    border-radius: 2rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    box-shadow: 0 0 0.4rem var(--bleuPrincipal);
+}
+.banniere .ban-img {
+    flex: 2;
+    padding: 2rem 1rem;
+}
+
+.banniere .ban-img img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* section: vie univ - licence - sport & social */
+.section #activites{
+    background: var(--white2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 0 1px var(--grisPal);
+}
+#activites span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#activites span img{
+    margin-right: 2rem;
+}
+
+/* etudier à l'INUKA */
+.section .etude{
+    display: flex;
+    justify-content: space-between; 
+}
+/* partie images */
+.section .etude .img{
+    flex: 1;
+    min-height: 450px;
+    background:no-repeat center center/cover url('../images/etudiants.jpg');
+}
+.section .etude .img{
+    width: 100%;
+    height: 100%;
+}
+
+/* partie text */
+.section .etude-text{ 
+    flex: 1;      
+    background: no-repeat center center/cover url('../images/programmer1.jpg');
+}
+.section .etude .text{
+    height: 100%;
+    width: 100%;
+    color: var(--white);
+    background: var(--bleuBg);
+}
+
+.section .etude .text h1{
+    font-size: 2rem;
+    font-family: serif;
+    padding: 6rem 0 3rem 4rem;
+    /* padding-bottom: 2rem; */
+}
+.section .etude .text p{
+    line-height: 1.8;
+    padding: 0 7rem 3rem 4rem;
+    font-weight: 500;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+.section .etude .text button{
+    border: none;
+    outline: none;
+    color: var(--white);
+    background: var(--rouge1);
+    border-radius: 2rem;
+    font-weight: bold;
+    margin: 0 3rem;
+    padding: 1rem 3rem;
+    box-shadow: 0 0 0.4rem var(--rouge1);   
+}
+
+
+/* ----- histoire -------- */
+.section .histoire{
+    background: no-repeat center center/cover
+     url('../images/programmer.jpg');
+     height: 500px;
+}
+    
+    /* background */
+.section .histoire .pedagogie{
+    display: flex;
+    color: var(--white2);
+    background: var(--bleuBg);
+    height: 100%;
+}
+
+    /* images */
+.section .histoire .img{
+    flex: 1;
+    width: 260px;
+    height: 36px;
+    margin-top: 10rem;
+    margin-left: 3rem;
+}
+.section .histoire .img img{
+    width: 100%;
+    height: auto;
+}
+
+    /* text */
+.section .histoire .text{
+    flex: 3;
+    padding: 0 4rem;
+    font-weight: normal;
+}
+
+.section .histoire .text h4{
+    font-family: "Playfair Display",sans-serif;
+    font-size: 2rem;
+    font-family: serif;
+    padding: 6rem 0 3rem 4rem;
+}
+.section .histoire .text p{
+    line-height: 1.8;
+    font-size: 20px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 7rem 3rem 4rem;
+    font-weight: 500;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+.section .histoire a{
+    font-weight: bold;
+    margin: 0 3rem;
+    color: var(--white);
+}
+.section .histoire a:hover{
+    color: var(--bleuBg);
+}
+
+
+/*  --------------------- partenaires ------------------ */
+
+.section #partenariats{
+    display: flex;
+    justify-content: space-between;        
+    padding: 4rem;
+}
+
+#partenariats h4{       /*Classe utilitaire*/
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: serif;
+    padding-bottom: 2rem;
+    color: var(--grisPal);
+}
+
+/* classe info */
+.section #partenariats .infos{
+    flex: 1;
+    padding-right: 1rem;
+}
+#partenariats .infos p{
+    line-height: 1.8;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+/* classe partenaire */
+.section #partenariats .partenaires{
+    flex: 1;
+    padding: 0 1rem;
+}
+
+#partenariats .partenaires .img-part{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#partenariats .partenaires .img-part .img{
+    /* flex: 1; */
+    max-width: 33.33%;
+    height: 100%;
+    padding-bottom: 4rem;
+}
+#partenariats .partenaires .img-part .img img{
+    width: 100%;
+}
+
+/* classe newsletter */
+.section #partenariats .newsletter{
+    flex: 1;
+    color: var(--white);
+    background: url(../images/comptable.jpg)
+       no-repeat center center/cover;
+    background-position-x: 0rem;
+    margin-left: 7rem;
+    border-radius: 1rem;
+}
+#partenariats .newsletter .form-letter{
+    background: var(--bleuBg);
+    height: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+}
+
+#partenariats .newsletter .img{
+    display: flex;
+    justify-content: center;
+}
+#partenariats .newsletter h5{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-family: serif;
+    font-weight: normal;
+}
+#partenariats .newsletter .text{    
+    padding-bottom: 1rem;
+    color: var(--white2);
+}
+#partenariats .newsletter input{
+    outline: none;
+    padding: 0.8rem;
+    border: none;
+    background: var(--bleu2);
+    color: var(--white);
+    width: 100%;
+    margin: 0.5rem 0;
+}
+#partenariats .newsletter #envoyer{
+    background: var(--rouge1);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.9rem;
+}
+
+
+/*  --------------------- footer ------------------ */
+
+.footer{
+    background: var(--bleu2);
+    color: var(--white2);
+    line-height: 2.2;
+}
+
+.footer .conteneur{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 4rem 5rem;
+}
+.footer a{
+    color: inherit;
+}
+.footer h6{
+    font-size: 1.3rem;
+}
+
+/* footer infos */
+.footer .infos .contacts{
+    padding-left: 3rem;
+}
+.footer .infos .contacts p{
+    padding-bottom: 1.6rem;
+}
+
+/* barre d'HR */
+.footer hr{
+    width: 85%;
+    margin: 0 auto;
+    border: none;    
+    border-top: 1px solid var(--grisPal2);
+}
+/* copyright */
+.footer .copyright{
+    display: flex;
+    justify-content: center;
+    padding: 0.9rem;
+}
+
+/* -------------------------------------- */
+                /* FACULTÉS */
+/* --------------------------------------- */
+
+/* section */
+.fac-section{
+    padding: 2rem;
+    background: var(--white2);
+}
+
+.fac-section >h1{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--bleuPrincipal);
+}
+
+.fac-section .informations{
+    padding: 1rem;
+    line-height: 2;
+    border-radius: 5px;
+    background: var(--white);
+    box-shadow: 0px 0 5px var(--bleu2);
+}
+
+.fac-section .filtre-faculte{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+/* liste des facultés */
+.fac-section .filtre-faculte .liste-facultes{
+    line-height: 2.5;
+    width: 42%;
+    height: fit-content;
+    padding:1rem 1.5rem;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 0 3px var(--grisPal2);
+}
+
+    /* titre des facultés */
+.filtre-faculte .liste-facultes > h2,
+.filtre-faculte .liste-departement   h2{
+    color: var(--bleu2);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid;
+}
+
+
+
+/* les departements */
+.fac-section .filtre-faculte .all-departments{
+    width: 52%;
+}
+.fac-section .filtre-faculte .liste-departement{
+    line-height: 2.5;
+    padding:1rem 1.5rem;
+    background: var(--white);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0 3px var(--grisPal2);
+}
+.fac-section .filtre-faculte .liste-departement li{
+    border-bottom: 1px dotted var(--grisPal2);
+}
+
+/* -------------------------------------- */
+                /* LOISIR */
+/* --------------------------------------- */
+.loisir-section{
+    width: 100%;    
+}
+.loisir-section .banniere{
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+    background: fixed no-repeat center center/cover
+     url('../images/messi.jpg');
+    background-position-y: 0;    
+}
+
+.loisir-section .banniere .titre {
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    background: var(--bleuBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loisir-section .banniere .titre h1{
+    font-size: 4rem;
+    font-family: 'Play fair';
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+}
+
+/* section article */
+.loisir-section .l-article{
+    padding: 2rem 4rem;
+}
+.loisir-section .l-article > h2{
+    font-size: 2rem;
+    font-family: 'Play fair',serif;
+    padding: 1rem 0.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.loisir-section .l-article .sport{
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+}
+    /* images */
+.l-article .sport .img{
+    width: 16.666rem;   /*largeur fixe*/
+    height: 13.331rem;  /* pour que l'image reste normal*/
+}
+
+.l-article .sport .img img{
+    width: 100%;
+    height: 100%;
+}
+    /* text */
+.l-article .sport .text{
+    width: 73%;
+}
+.l-article .sport .text h1{
+    font-size: 1.5rem;
+    font-family: 'Play fair', Roboto, sans-serif;
+    color: var(--bleu2);
+    margin-bottom: 1rem;
+}
+.l-article .sport .text p{
+    line-height: 1.8;
+}
+
+/* -------------------------------------- */
+        /* OMEC */
+/* --------------------------------------- */
+.omec-section{
+    width: 100%;
+    height: 84vh;
+    background: no-repeat center center/cover
+     url('../images/programmer.jpg');
+}
+.omec-section .contenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.8);
+}
+.omec-section .contenu h1{
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 500;
+    font-family: 'Play fair';
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 3px var(--grisPal);
+}
+
+/* -------------------------------------- */
+        /* A PROPOS */
+/* --------------------------------------- */
+
+/* à propos section */
+.apropos-section{
+    width: 100%;    
+}
+
+.apropos-section .banniere{
+    height: 50vh;
+    background: no-repeat center center/cover
+     url('../images/h1.jpg');
+    background-position-y: -8rem;
+}
+
+.contenu{
+    padding: 2rem;
+    display: flex;    
+    justify-content: space-between;
+}
+
+.contenu .img{
+    width: 35%;
+}
+.contenu .img img{
+    width: 100%;
+    height: auto;
+}
+
+.contenu .article{
+    width: 60%;
+    margin-right: 3rem;
+    padding: 0 2rem;
+}
+
+.contenu .article .elem{
+    margin-bottom: 1rem; /* espacer*/
+}
+    /* A propos - liste des blocs */
+.contenu .article .elem > h3{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Play fair',serif;
+    padding-bottom: 1rem;
+}
+.contenu .article .elem > p,
+.contenu .article .elem > table{
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+}
+
+/* -------------------------------------- */
+                /* CONTACTS */
+/* --------------------------------------- */
+.cont-section{
+    width: 100%;
+}
+
+.cont-section .banniere{
+    width: 100%;
+    height: 40vh;
+    background: no-repeat center center/cover
+     url('../images/contact-banner.jpg');
+    background-attachment: fixed;
+    background-position-y: -7rem;
+}
+
+/* les asides */
+.cont-section .contact{
+    width: 100%;
+    padding: 3rem 5rem;
+    display: flex;
+    background: var(--white2);
+}
+
+/* aside infos */
+.cont-section .contact .infos{
+    flex: 2;
+    background: var(--white);
+    font-family: "Playfair Display",sans-serif;
+    justify-content: space-between;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--white2); 
+}
+
+.cont-section .contact .infos h4{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 200;
+    color: var(--bleu2);
+    padding-bottom: 1rem ;
+}
+
+.cont-section .contact .infos p{
+    font-size: 1.1rem;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 2.2;
+    padding-bottom: 2rem;
+}
+
+
+/* formulaire */
+.cont-section .contact .formulaire{
+    flex:4;
+    background: var(--white);
+    padding: 1rem;
+    margin-left: 2rem;
+    border-radius: 10px;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--white2); 
+}
+
+.contact .formulaire h1{
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--bleu2);
+}
+.contact .formulaire p{
+    font-size: 1.2rem;
+    font-style: italic;    
+    padding-bottom: 1rem ;
+}
+
+
+/*  form */
+.contact .formulaire .form{
+    font-size: 1.2rem;
+    padding-top: 2.5rem;
+}
+
+.contact .formulaire .form .aligner{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* forme generale pour les labels */
+.contact .formulaire .form label{
+    width: 100%;
+    font-weight: 500;
+}
+
+/* les labels */
+.contact .formulaire .form input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--white2);
+    padding: 0.3rem 0;
+    margin: 0.5rem 0;
+}
+.contact .formulaire .form textarea{
+    padding: 0.3rem;
+    outline: none;
+    margin: 0.5rem 0;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--white2);    
+}
+.contact .formulaire .form input[type='submit']{
+    padding: 1rem;
+    outline: none;
+    border: none;
+    background: var(--bleu2);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 25px;
+    border-radius: 25px;
+    box-shadow: 2px 0 5px var(--bleu2);
+    transition: all ease-in-out 0.3s;
+}
+.contact .formulaire .form input[type='submit']:hover{
+    background: var(--bleuBg);
+}
